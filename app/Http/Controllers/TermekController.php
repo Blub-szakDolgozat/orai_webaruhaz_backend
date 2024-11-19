@@ -20,7 +20,9 @@ class TermekController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $record = new Termek();
+        $record->fill($request->all());
+        $record->save();
     }
 
     /**

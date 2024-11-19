@@ -44,8 +44,8 @@ class TermekController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        Termek::find($id)->delete();
     }
 }

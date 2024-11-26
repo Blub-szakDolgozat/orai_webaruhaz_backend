@@ -30,7 +30,9 @@ class TermekController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $termek = Termek::where('id', $id)
+        ->get();
+        return $termek;
     }
 
     /**
@@ -38,7 +40,9 @@ class TermekController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $record = Termek::find($id);
+        $record -> fill($request ->all());
+        $record ->save();
     }
 
     /**

@@ -38,7 +38,7 @@ class TermekController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function put(Request $request, string $id)
     {
         $record = Termek::find($id);
         $record -> fill($request ->all());
@@ -52,4 +52,6 @@ class TermekController extends Controller
     {
         Termek::find($id)->delete();
     }
+
+
 }

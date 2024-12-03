@@ -17,4 +17,4 @@ Route::delete('/termekTorol/{id}', [TermekController::class, 'destroy']);
 Route::get('/termekMegmutat/{id}', [TermekController::class, 'show']);
 
 // Termék id alapján részlegesen frissítése:
-Route::patch('/termekReszlegesenFrissit/{id}', [TermekController::class, 'update']);
+Route::put('/termekek/{id}', [TermekController::class, 'put']);

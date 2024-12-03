@@ -9,6 +9,7 @@ class Termek extends Model
     protected $fillable=[
         'cim',
         'leiras',
-        'ar'
+        'ar',
+        'db'
     ];
 }
